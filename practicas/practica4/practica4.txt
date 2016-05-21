@@ -1,0 +1,20 @@
+Práctica 4
+----------
+
+Generators
+----------
+
+1) Analizar la noción de "Generator" (página 59 del libro "Data Science 
+from Scratch")
+
+Map-Reduce
+----------
+
+1) Implementar el esquema Map-Reduce propuesto en el capítulo 24 del 
+libro "Data Science from Scratch" (hasta la página 400 inclusive)
+
+2) Adaptar el ejercicio "Example: Analyzing Status Updates" de la 
+página 401 para extraer información del archivo de tweets 
+(argentina.txt)
+
+3) Analizar el ejemplo de la página 403 "Example: Matrix Multiplication"
