@@ -5,7 +5,7 @@ CREATE TABLE usuario (
 	profile_image_url varchar(100),
 	location varchar(30),
 	url varchar(100),
-	description varchar (100) ,
+	description varchar (200) ,
 	created_at varchar(30),
 	followers_count int,
 	friends_count int,
@@ -15,21 +15,21 @@ CREATE TABLE usuario (
 );
 
 CREATE TABLE tweet(
-	tweet_id bigint primary key,
-	user_id bigint,
-	tweet_text varchar(140),
+	tweet_id bigint  primary key,
+	user_id bigint ,
+	tweet_text varchar(150),
 	created_at varchar(30),
-	original_tweet_id bigint,
+	original_tweet_id bigint ,
 	retweet_count int
 );
 
 CREATE TABLE hashtag(
-	hashtag_id int primary key,
-	hashtag_text varchar(140)
+	hashtag_id serial primary key,
+	hashtag_text varchar(150)
 );
 
 CREATE TABLE media(
-	media_id int primary key,
+	media_id serial primary key,
 	type varchar(20),
 	url varchar(100)
 );

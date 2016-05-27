@@ -1,0 +1,122 @@
+Practica 5
+----------
+
+Introducción
+------------
+Para empezar a trabajar con MongoDB es necesario entender las nociones de 
+"collection" y "document" para eso la sugerencia es leer estas referencias:
+
+	mongodb_quick_reference_cards.pdf (primera pagina)
+	Collections: https://docs.mongodb.com/manual/core/databases-and-collections/
+	Documents: https://docs.mongodb.com/manual/core/document/
+	
+Utiles
+------
+En MongoDB no hay esquema para ver las keys hay que examinar un documento de una colección:
+
+Object.keys(db.tweets.findOne())
+
+El manual con todas las referencias (puede resultar útil durante las actividades): 
+	
+	https://docs.mongodb.com/manual/contents/
+
+Referencia de Mongo Shell
+
+	https://docs.mongodb.com/manual/reference/mongo-shell/
+
+Actividades
+-----------
+
+1.Instalación
+-------------
+
+1.1) Instalar MongoDB
+1.2) Ejecutar el servidor de MongoDB (mongod)
+1.3) Ejecutar el cliente de MongoDB (mongo)
+
+2.Importacion de datos
+----------------------
+
+2.1) Seleccionar un subconjunto de tweets del archivo argentina.txt. Ejemplo,
+ejecutar:
+	
+	head -10000 argentina.txt > tweets.json (selecciona 5000 tweets)
+
+2.2) Importar el subconjunto de tweets en MongoDB. Ejemplo:
+
+	./mongoimport --db test --collection tweets --drop --file /home/manuel/undav/bigdata/python/mongodb/tweets.json
+
+3.Comparacion SQL-MongoDB
+-------------------------
+
+3.1) Analizar las diferencias entre SQL y el lenguaje de consulta de MongoDB.
+Referencias:
+	
+	mongodb_quick_reference_cards.pdf (páginas 1 y 2 y sección "Mapping SQL to MongoDB")
+
+	https://docs.mongodb.com/manual/reference/sql-comparison/
+
+Más ejemplos (revisar la parte de "Embedded Documents"):
+
+	https://docs.mongodb.com/manual/tutorial/query-documents 
+
+3.2) Realizar las siguientes consultas en MongoDB:
+
+	a) Seleccionar el id y el texto de 10 "documents"
+	
+	b) Seleccionar los lenguajes distintos de los tweets
+	
+	c) Seleccionar el id, el nombre de usuario y la cantidad de followers (key 
+	"user.follower_count") de aquellos usuarios que tengan más de 100 followers
+	
+	d) Seleccionar la cantidad de usuarios con más 100 followers
+	
+	e) Seleccionar el id, el nombre de usuario y la cantidad de followers (key 
+	"user.follower_count") de los 10 usuarios con más followers ordenado de manera descendente
+	
+4.Map-Reduce
+----------
+4.1) MongoDB provee soporte para el modelo de programación map-reduce. 
+Analizar estas referencias:
+
+	https://docs.mongodb.com/manual/core/map-reduce/
+	
+	https://docs.mongodb.com/manual/tutorial/map-reduce-examples/
+
+4.2) Realizar las siguientes consultas con map-reduce:
+
+	a) En base al campo "source", determinar la cantidad de usuarios que 
+	hay por cada canal.
+	
+	b) Determinar la cantidad de tweets por cada lenguaje
+
+	c) Clasificar los textos de los tweets en corto (< 10 palabras), 
+	mediano (>=10, <20 palabras) y largo (>= 20 palabras). Devolver la 
+	cantidad de tweets en cada una de las clases. Referencia:
+	
+	http://stackoverflow.com/questions/18679576/counting-words-in-string
+
+NOTA. MongoDB provee otra técnica para realizar estas consultas que se llama "agregación" (similar a SQL):
+
+	https://docs.mongodb.com/manual/aggregation/
+
+5.Python
+------
+5.1) Instalar el módulo para conectarse a MongoDB desde Python y revisar 
+los artículos de referencia para consultar la base:
+
+	https://docs.mongodb.com/getting-started/python/client/
+	
+	Consultas simples: https://docs.mongodb.com/getting-started/python/query/
+	
+	Consultas con agregación: https://docs.mongodb.com/getting-started/python/aggregation/
+	
+5.2) Realizar en Python los siguientes programas:
+	
+	a) Obtener los documentos del usuario cuyo id es 227188464
+
+	b) Obtener el nombre de usuario y las coordenadas geográficas de los 
+	tweets que proveen información geográfica. Obs. la especificación 
+	de la condición "not null" en Python es: {"geo": {"$ne":None}}
+
+	c) Determinar la cantidad de tweets por cada lenguaje
