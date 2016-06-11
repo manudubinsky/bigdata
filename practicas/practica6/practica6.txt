@@ -1,0 +1,35 @@
+Practica 6
+----------
+
+Introducción
+------------
+La base de esta práctica es la implementación del modelo Naive Bayes del libro 
+(Data Science from Scratch, capítulo 13)
+
+Actividades
+-----------
+
+1.Análisis
+----------
+
+1.1) De acuerdo a la implementación del filtro de spam (páginas 239-240),
+describir en pocas palabras qué hace cada una de las funciones y la clase NaiveBayesClassifier. Por ejempĺo:
+
+tokenize(message): recibe un mensaje como parámetro y devuelve el conjunto 
+de palabras (pasadas a minúsculas) del mensaje .
+
+2.Evaluación de la implementación
+---------------------------------
+
+2.1) Entrenar y testear el modelo de acuerdo con el procedimiento sugerido 
+a partir de la página 240.
+
+2.2) Realizar un análisis similar al propuesto en las páginas 240-241
+
+3.Extender la implementación
+----------------------------
+
+3.1) Extender la implementación para que considere el contenido de los mails (no 
+sólo el subject).
+
+3.2) ¿Mejora el rendimiento del filtro?
