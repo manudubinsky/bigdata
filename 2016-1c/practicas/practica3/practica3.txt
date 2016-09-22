@@ -1,0 +1,38 @@
+Practica 3
+----------
+
+objetivos
+---------
+
+Los objetivos de esta práctica son los siguientes:
+
+1) Analizar un caso real de ciencia de datos
+
+2) Elaborar un esquema de datos en base a un conjunto de datos 
+semi-estructurados 
+
+3) Diseñar e implementar un procedimiento de importacion de datos masiva
+ a una base de datos relacional
+
+4) Analizar los datos y extraer conclusiones del análisis
+
+Actividades
+-----------
+
+1) Analizar los datos y la estructura del archivo argentina.txt
+
+2) Elaborar un esquema normalizado (3ra. forma normal) a partir de los 
+datos semi-estructurados del archivo
+
+3) Decidir si resulta más conveniente implementar el esquema 
+normalizado del punto anterior o si conviene usar el tipo de datos json
+(ver seccion 8.14 del manual de postgres)
+
+4) Implementar la base de datos en postgres según la decision 
+anterior
+
+5) Diseñar e implementar un procedimiento de importacion masiva a la 
+base (ver seccion 14.4 del manual de postgres)
+
+6) Plantear y realizar análisis de los datos con el objetivo de extraer 
+conclusiones no triviales

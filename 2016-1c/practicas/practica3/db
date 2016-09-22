@@ -1,0 +1,45 @@
+CREATE TABLE usuario (
+	user_id bigint primary key,
+	screen_name varchar(15),
+	name varchar(20),
+	profile_image_url varchar(100),
+	location varchar(30),
+	url varchar(100),
+	description varchar (200) ,
+	created_at varchar(30),
+	followers_count int,
+	friends_count int,
+	statuses_count int ,
+	time_zone varchar(30),
+	lang varchar(10) 
+);
+
+CREATE TABLE tweet(
+	tweet_id bigint  primary key,
+	user_id bigint ,
+	tweet_text varchar(150),
+	created_at varchar(30),
+	original_tweet_id bigint ,
+	retweet_count int
+);
+
+CREATE TABLE hashtag(
+	hashtag_id serial primary key,
+	hashtag_text varchar(150)
+);
+
+CREATE TABLE media(
+	media_id serial primary key,
+	type varchar(20),
+	url varchar(100)
+);
+
+CREATE TABLE tweet_hashtag(
+	hashtag_id bigint references hashtag(hashtag_id) ,
+	tweet_id bigint references tweet(tweet_id)
+);
+
+CREATE TABLE tweet_media(
+	media_id int references media(media_id),
+	tweet_id bigint references tweet(tweet_id)
+);

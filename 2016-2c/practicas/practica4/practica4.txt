@@ -1,0 +1,66 @@
+Práctica 4
+----------
+Los objetivos de esta práctica son:
+
+	1) Realizar un scraper
+	2) Paralelizar manualmente la ejecucion de bajada de las páginas web
+	3) Realizar una visualizacion de la relevancia de las palabras en las 
+	páginas web
+	4) Establecer una clasificacion de los sitios web a partir de las 
+	visualizaciones.
+	5) Realizar otros análisis de los datos
+
+Introduccion
+------------
+
+Un scraper (crawler o spider) es un programa que automatiza la bajada 
+de páginas web.
+
+Una nube de palabras (word cloud) es una visualizacion bastante 
+popular que permite mostrar las palabras más relevantes de un texto.
+
+El libro que vamos a usar es "Data Science from Scratch".
+
+El archivo "top-1m.csv" contiene la informacion de un millon de sitios 
+web ordenados por cantidad de visitas. Esta informacion fue tomada de: 
+	http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
+
+El archivo "listado-general.txt" es un archivo de palabras en 
+castellano tomado de: 
+	https://github.com/javierarce/palabras/
+
+Ejercicio 1
+-----------
+
+1) Realizar un crawler que recorra un archivo de texto que contenga en 
+cada línea la url de un sitio web, baje la página correspondiente 
+(ver capítulo Scraping the Web, pág. 163) y genere la lista de las 
+palabras en castellano que contiene.
+
+2) Obtener los 500 sitios más populares de Argentina del archivo 
+"top-1m.csv". Particionar esa informacion en 10 archivos de 50 sitios 
+cada uno.
+
+3) Ejecutar 10 instancias del programa del punto 1) con los archivos del 
+punto 2).
+
+4) Para cada una de las páginas web, realizar una nube de palabras (ver 
+capítulo Word Clouds, pág. 333) de las 10 palabras más relevantes 
+Grabar cada imagen como jpg. Más relevante puede ser: más larga o más frecuente. 
+
+NOTA: En caso de ser necesario, realizar una lista de palabras prohibidas (preposiciones, 
+artículos, etc.) con el objetivo de analizar la relevancia de las 
+palabras de las páginas web.
+
+Ejercicio 2
+-----------
+
+1) Realizar un histograma de los sitios web por país. Considerar 
+solamente aquellos sitios que tienen en el dominio la informacion del 
+país.
+
+2) Idem punto 1) pero solamente teniendo en cuenta los sitios de 
+entidades educativas (.edu).
+
+3) En qué puesto aparece la UNDAV en el ranking de instituciones 
+educativas argentinas. Y del mundo?

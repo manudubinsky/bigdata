@@ -1,0 +1,21 @@
+Practica 7
+----------
+
+Introducción
+------------
+* La base de esta práctica es el capítulo 22 del libro "Data Science from Scratch"
+
+* El archivo "book-crossing-ratings-10.h5" es un archivo en formato HDF5 (https://www.hdfgroup.org/HDF5/). Contiene información real (del año 2004) de calificaciones de libros realizadas por usuarios. (Fuente: http://mldata.org/repository/tags/data/collaborative-filtering/)
+
+* Para poder procesar en python el formato HDF5 hay que instalar el módulo h5py (http://docs.h5py.org/en/latest/build.html#install)
+
+Actividades
+-----------
+
+1) Analizar la estructura del archivo "book-crossing-ratings-10.h5". El programa "prueba.py" permite visualizar algunos aspectos de la estructura del mismo.
+
+2) Adaptar el sistema de recomendación "User-Based Collaborative Filtering" sugerido en el cap. 22 del libro "Data Science from Scratch" para los datos del archivo "book-crossing-ratings-10.h5".
+
+3) Elegir 10 usuarios (userid) y (para cada uno) devolver el par (ID,similarity) del libro (bookid) que se le recomendaría a cada uno.
+
+4) Elegir 1 usuario y devolver los pares (userid, similarity) de los 5 usuarios más parecidos a él.

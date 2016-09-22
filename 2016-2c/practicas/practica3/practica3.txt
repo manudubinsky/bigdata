@@ -1,0 +1,106 @@
+Práctica 3
+----------
+Los objetivos de esta práctica son:
+
+	1) Comprender las estructuras de datos del módulo "pandas" (Series 
+	y Data Frames)
+	2) Procesar un archivo csv con pandas
+	3) Realizar distintos análisis de los datos
+	4) Realizar cálculos geográficos mediante el módulo "geopy"
+
+Introduccion
+------------
+
+En esta práctica vamos a empezar a trabajar con unas estructuras de 
+datos convenientes para procesar tablas (tipo Excel) en python. Estas 
+estructuras sirven para explorar los datos de ciertos datasets.
+
+El libro que vamos a usar es "Python for Data Analysis".
+
+Actividades preliminares
+------------------------
+
+1) Instalar los siguientes módulos de python (en caso de que no estén 
+instalados): "matplotlib", "pandas" y "geopy"
+
+Ejercicio 1
+-----------
+
+En el capítulo 5 del libro ("Getting started with pandas") revisar y realizar 
+las actividades de las siguientes secciones:
+
+	a) Introduction to pandas Data Structures (pág. 112-120)
+	b) Indexing, selection, and filtering (pág. 125-128)
+	c) Function application and mapping (pág. 132-133)
+	d) Summarizing and Computing Descriptive Statistics (pág. 137-139)
+	e) Unique Values, Value Counts, and Membership (pág. 141-142)
+	f) Filtering Out Missing Data (pág. 143-145)
+
+Ejercicio 2
+-----------
+En el sitio http://www.properati.com.ar/datas se publican avisos sobre 
+alquiler y venta de propiedades. Los avisos se publican como archivos 
+csv. 
+	
+Para el archivo "properati-AR-2016-08-01-properties-rent.csv", realizar 
+los siguientes análisis:
+
+1) Calcular el valor medio de los deptos 2 ambientes en Mar del Plata
+2) Hacer un histograma por cantidad de ambientes. Repetir el análisis 
+quitando los outliers
+3) Hacer un histograma de las 10 localidades con mayor cantidad de 
+publicaciones de deptos. de 2 ambientes
+4) Hacer un histograma por tipos de propiedad
+5) Para aquellas propiedades que tengan información geográfica, calcular la 
+distancia al congreso de la nación
+6) Hacer un scatter plot de las propiedades que difieran a lo sumo en 
+0.1 grados en latitud y longitud respecto al congreso de la nación
+
+Referencias
+-----------
+1) Para importar archivos csv como Data Frames en pandas ver las 
+primeras páginas del capítulo 6 ("Data Loading, Storage, and File 
+Formats") del libro.
+
+2) Para ver la funcionalidad de ploteo en pandas ver el capítulo 
+8 ("Plotting and Visualization") sección "Plotting Functions in 
+pandas".
+
+3) Para mayor detalles de cómo se pueden hacer histogramas en 
+pandas, ver:
+	http://stackoverflow.com/questions/14248706/how-can-i-plot-a-histogram-in-pandas-using-nominal-values
+	http://stackoverflow.com/questions/31029560/plotting-categorical-data-with-pandas-and-matplotlib
+
+Ejemplo de ploteo en pandas:
+
+	s = Series(np.random.randn(10).cumsum(), index=np.arange(0, 100, 10))
+	p = s.plot()
+	plt.show() # esto es necesario porque la librería matplotlib lo 
+	requiere
+
+4) Las referencias de uso de geopy son:
+	https://pypi.python.org/pypi/geopy
+	http://geopy.readthedocs.io/en/latest/#module-geopy.distance
+
+5) Las columnas del archivo csv son:
+	Fecha de creación
+	Tipo de la propiedad (house, apartment, ph)
+	Operación del aviso (sell, rent)
+	Nombre del lugar
+	Nombre del lugar + nombre de sus ‘padres’
+	ID de geonames del lugar (si está disponible)
+	Latitud,Longitud
+	Precio original del aviso
+	Moneda original del aviso (ARS, USD)
+	Precio del aviso en moneda local (ARS)
+	Precio aproximado en USD
+	Superficie en m²
+	Superficie cubierta en m²
+	Precio en USD/m²
+	Precio por m²
+	N° de piso, si corresponde
+	Ambientes
+	URL en Properati
+	Descripción
+	Título
+	URL de un thumbnail de la primer foto

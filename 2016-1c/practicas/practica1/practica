@@ -1,0 +1,24 @@
+Práctica
+--------
+Hacer los siguientes programas para procesar el archivo "quijote.txt":
+
+a) Pasar el texto a minúsculas
+b) Descartar los signos de puntuación
+c) Separar y contar las ocurrencias de las palabras
+d) Ordenar de modo descendente las palabras por ocurrencias
+
+NOTA: en todos los casos mostrar la salida por pantalla para que se
+puedan encadenar con pipes ('|').
+
+En base a lo anterior, responder a las siguientes preguntas:
+
+1) Cuántas palabras tiene el texto?
+
+2) Cuáles son las 5 palabras más usadas?
+
+3) Armar un archivo de palabras prohibidas para filtrar el texto (por
+ejemplo las preposiciones)
+
+4) Repetir el punto 2 filtrando el texto con el archivo del punto 3
+
+5) Repetir los puntos 1 y 2 con el archivo rey_lear.txt

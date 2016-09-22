@@ -1,0 +1,10 @@
+Práctica 2
+----------
+
+Realizar las actividades propuestas en el capítulo 2 del manual de 
+postgres a partir de la sección 2.3 (página 81).
+
+Guardar en un archivo con extension .sql las sentencias SQL que 
+ejecuten (para subirlo al repositorio).
+
+
